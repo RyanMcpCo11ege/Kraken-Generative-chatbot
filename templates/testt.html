@@ -1,0 +1,225 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crackin</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.10.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.10.1/core.js"></script>
+</head>
+
+
+    <style>
+
+
+        body{
+            font-family:monospace;
+           background-color: blueviolet;
+
+        }
+
+        #Crackin{
+            margin-left:auto;
+            margin-right: auto;
+            width:40%;
+            margin-top: 50px ;
+            padding: 20px;
+            background-color: cyan;
+            border-radius: 10px;
+        }
+
+        .botText{
+            font-family: monospace;
+            font-size: 16px;
+            text-align: center;
+            line-height: 25px;
+            color:rgba(160, 9, 173, 0.884) ;
+        }
+
+        #userinput{
+            margin-left:auto;
+            margin-right: auto;
+
+            
+            width:40%;
+            text-align: center;
+            margin-top: 20px ;
+            
+        }
+
+        #textinput{
+            border-bottom: 3px solid #4008c4;
+            width: 80%;
+            font-family: monospace;
+            font-size: 16px;
+
+            padding: 5px ;
+        }
+
+        #buttoninput{
+            font-family: monospace;
+            font-size: monospace;
+            font-size: 16px;
+
+            padding: 5px ;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .usertext{
+
+            text-align: right;
+        }
+        
+    </style>
+
+
+
+
+
+
+</head>
+<body>
+    
+
+
+
+
+    <h1> Crackin </h1>
+    <div>
+        <div id="Crackin"> 
+            <P class="botText"><span>Hello! </span></P>
+
+
+        </div>
+
+        <div id="User">
+
+            <input id ="textinput" type="text" name="usermessage " placeholder="text goes here "/>
+            <input id = "buttoninput" type="submit" value="send"/>
+        </div>
+
+
+
+
+    </div>
+
+
+    <script>
+
+        function getuserresponse(){
+
+            var userText = $('#textinput').val();
+            var userHTML = "<p class='usertext'><span>"+ userText + "</span></p>";
+            $('#textinput').val("");
+            $('#Crackin').append(userHTML);
+            $('#Crackin')[0].scrollIntoView({ block: 'start', behavior: 'smooth' });
+            $.get("/get",{userMessage: userText}).done(function(data){
+                var  botHTML = "<p class='botText'><span>"+data+"</span></p>"
+                $('#Crackin').append(botHTML);
+                $('#Crackin')[0].scrollIntoView({ block: 'end', behavior: 'smooth' });
+
+
+
+
+            });
+            
+        
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+        $("#textinput").keypress(function(e){
+            if(e.which == 13){
+                getuserresponse();
+
+
+            }
+
+
+
+
+
+        });
+
+        $('#buttoninput').click(function(){
+
+            getuserresponse();
+        });
+
+
+    
+        
+
+
+
+
+
+
+    </script>
+   
+    </script>
+
+    <py-script>
+
+
+    def ipGet():
+        hostname = socket.gethostname()
+
+        myip = socket.gethostbyname(hostname)
+
+        print('my ip address is ' + myip)
+        
+        user_response = input("user:").lower
+        if user_response == "calculator":
+            Mathbot()
+        if user_response == "conversion":
+            Unitbot()
+        if user_response == "Suspicous URL":
+            UrlPhisher()
+        if user_response == "CryptCreeper":
+            textencrypt()
+        if user_response == "Useless":
+            Fileencrypt()
+        elif user_response.strip() == "show me my ip":
+            ipGet()
+        elif user_response.strip() == "network devices":
+            networkintrusion()
+    
+        elif user_response == "password checker" or user_response == "check my password":
+            Checker()
+        else:
+            response = bot.get_response(user_response)
+            print("Chimera:", response)
+            
+
+
+    </py-script>
+
+
+
+</body>
+</html> 

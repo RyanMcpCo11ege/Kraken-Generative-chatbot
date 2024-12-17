@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krackin</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.10.1/core.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script type="module" src="https://pyscript.net/releases/2024.10.1/core.js"></script>
+</head>
+
+
+    <style>
+
+body{
+    font-family:"press Start 2P",monospace;
+    background:linear-gradient(to top, rgb(255, 255, 255) 20% ,rgb(3, 3, 3) 80%);;
+    height:100vh;
+    margin:0;
+    
+
+}
+
+
+.navbar {
+    background: linear-gradient(#000000,#9a00f3);
+    height: 80px;
+    display: flex;
+    justify-content: right;
+    align-items: right ;
+    font-size: 1.2rem;
+    position:relative;
+
+
+
+
+}
+h1{
+    color: rgb(219, 205, 4);
+    position: relative;
+    
+    right: 500px;
+
+}
+
+
+
+
+
+
+
+#navbar__logo img {
+    width: 100px;
+    height: auto;
+    right: 1700px;
+    position:relative;
+    bottom:20px;
+    
+}
+
+#navbar_menu{
+    justify-content: left;
+    align-items: left ;
+    font-size: 1.2rem;
+    position:relative;
+    top:10px;
+}
+
+.navbar_item{
+    top: 25px;
+    position:relative;
+    color:rgb(255, 251, 0);
+    
+}
+.navbar_item2{
+    top: 25px;
+    position: relative;
+    color:rgb(255, 238, 0);
+
+}
+
+
+
+
+        
+        #Crackin{
+            margin-left:auto;
+            margin-right: auto;
+            width:90%;
+            margin-top: 50px ;
+            padding: 20px;
+            background: linear-gradient(#000000,#ece9e9);
+            border-radius: 10px;
+            right: 0px;
+            position: relative;
+        }
+
+        .botText{
+            font-family:"press Start 2P"monospace;
+            font-size: 16px;
+            text-align: center;
+            line-height: 25px;
+            color:rgba(241, 225, 4, 0.973) ;
+        }
+
+        #userinput{
+            margin-left:auto;
+            margin-right: auto;
+
+            
+            width:40%;
+            text-align: center;
+            margin-top: 20px ;
+            right: 0px;
+            position: relative;
+            
+        }
+
+        #textinput{
+            border-bottom: 3px solid #cc02ff;
+            width: 200%;
+            font-family:"press Start 2P";
+            font-size: 10px;
+            color: rgb(0, 0, 0);
+            border-color:#c101fc;
+            
+            height: 35px;
+            right: 0px;
+            position: relative;
+            
+           
+
+            padding: 20px ;
+        }
+
+        #buttoninput{
+            font-family:"press Start 2P",monospace;
+            font-size: "press Start 2P",monospace;
+            font-size: 35px;
+            border: #000000;
+            background: linear-gradient(#d5d4d6,#ffffff);
+            
+            position: absolute;
+            
+            
+
+            padding: 5px ;
+        }
+        #buttoninput:hover{
+            color: darkorange;
+
+
+        }
+        #buttoninput:active{
+            color: rgb(243, 0, 0);
+
+
+        }
+
+        h1{
+            text-align: center;
+            font-family:"press Start 2P",monospace;
+        }
+
+        .usertext{
+
+
+            text-align: right;
+        }
+
+        #file-upload-section{
+            font-family:"press Start 2P",monospace;
+            height: 35px;
+            right: 0px;
+            bottom: -250px;
+            position: relative;
+            width: 50px;
+            color: #000000;
+            
+
+
+        }
+
+        #file-upload{
+            font-family:"press Start 2P",monospace;
+            font-size: "press Start 2P",monospace;
+            font-size: 11px;
+            border: #fd0101;
+            background:#ffffff
+
+        }
+        #encryplink{
+            font-family:"press Start 2P",monospace;
+            height: 35px;
+            right: 0px;
+           color: #c101fc;
+            position: relative;
+            width: 50px;
+            
+    
+        }
+
+        
+        
+
+        
+
+        
+
+    </style>
+
+
+
+
+
+
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Krackin</h1>
+        <li class="navbar_item">
+            <a href="/aboutgen.html" class="navbar__links"> About </a>
+            <li class="navbar_item2">
+                <a href="/Usagegen.html" class="navbar__links"> How to use </a>
+        <div class="navbar__container">
+          <a href="\" id="navbar__logo">
+            <img src="/logo" alt="Logo goes here">
+          </a>
+    <ul class="navbar_menu">
+        
+
+        </li>
+
+
+    </ul>  
+    </nav>
+
+
+    
+          
+
+    
+    <div>
+        <div id="Crackin"> 
+            <P class="botText"><span>Hello! </span></P>
+
+
+        </div>
+
+        
+
+        <div id="User">
+
+            <input id ="textinput" type="text" name="usermessage " placeholder="text goes here "/>
+            <input id = "buttoninput" type="submit" value="send"/>
+
+
+        </div>
+        <div id="file-upload-section">
+            <h2>Encrypt/Decrypt Files</h2>
+            <form method="POST" enctype="multipart/form-data">
+                {{form.hidden_tag()}}
+                {{form.file()}}
+                {{form.submit()}}
+    
+                
+            </form>
+        </div>
+
+        
+
+        <h2 id ="encryplink"> </h2>
+        <p>
+        <a href="{{ url_for('encryptedfile') }}">Encrypted File</a>
+        </p>
+
+        <h2 id ="decryplink"> </h2>
+        <p>
+        <a href="{{ url_for('dikcryptedfile') }}">Decrypted File</a>
+        </p>
+        <h2 id ="scanlink"> </h2>
+        <p>
+        <a href="{{ url_for('netfile') }}">Scan Results</a>
+        </p>
+
+
+
+        
+
+
+
+
+    </div>
+
+
+    <script>
+
+
+function getuserresponse() {
+            var userText = $('#textinput').val();
+            if (userText.trim() === '') return; 
+
+            var userHTML = "<p class='usertext'><span>" + userText + "</span></p>";
+            $('#textinput').val("");
+            $('#Crackin').append(userHTML);
+            $('#Crackin')[0].scrollIntoView({ block: 'end', behavior: 'smooth' });
+
+            $.get("/get", { userMessage: userText })
+                .done(function(data) {
+                    var botHTML = "<p class='botText'><span>" + data + "</span></p>";
+                    $('#Crackin').append(botHTML);
+                    $('#Crackin')[0].scrollIntoView({ block: 'end', behavior: 'smooth' });
+                })
+                .fail(function() {
+                    var errorHTML = "<p class='botText'><span>Sorry, there was an error processing your request.</span></p>";
+                    $('#Crackin').append(errorHTML);
+                    $('#Crackin')[0].scrollIntoView({ block: 'end', behavior: 'smooth' });
+                });
+        }
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        $("#textinput").keypress(function(e){
+            if(e.which == 13){
+                getuserresponse();
+
+
+            }
+
+
+
+
+
+        });
+
+        $('#buttoninput').click(function(){
+
+            getuserresponse();
+        });
+
+
+    
+        
+
+
+
+
+
+
+    </script>
+   
+    
+   
+
+    
+            
+
+
+
+
+</body>
+</html> 
